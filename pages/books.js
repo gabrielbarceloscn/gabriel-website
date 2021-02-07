@@ -34,7 +34,7 @@ const Books = ({ books }) => {
       <VStack spacing={8}>
         <Section>
           <VStack>
-            <Heading as="h1">Livros</Heading>
+            <Heading as="h1">Biblioteca</Heading>
             <Text
               fontSize={["xl", "2xl"]}
               color={useColorModeValue("gray.500", "gray.200")}

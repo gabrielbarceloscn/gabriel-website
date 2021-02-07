@@ -87,57 +87,61 @@ const Header = () => {
           <HStack justify="space-between" w="100%" h={16}>
             <AvatarNavigation />
             <HStack ml={-4} spacing={2}>
-              <NavLink href="/about" name="About" />
+              {/*<NavLink href="/about" name="About" />*/}
               <NavLink href="/blog" name="Blog" />
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  variant="ghost"
-                  size="md"
-                  px={4}
-                  rightIcon={<ChevronDown size={18} />}
-                >
-                  Links
-                </MenuButton>
-                <MenuList>
-                  <Link href="/books">
-                    <MenuItem>
-                      <HStack>
-                        <Icon
-                          as={BookOpen}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Books</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                  <Link href="/bookmarks">
-                    <MenuItem>
-                      <HStack>
-                        <Icon
-                          as={Bookmark}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Bookmarks</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                  <Link href="/tools">
-                    <MenuItem>
-                      <HStack>
-                        <Icon
-                          as={LightningBolt}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Tools</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                </MenuList>
-              </Menu>
+              <NavLink href="/books" name="Biblioteca" />
+              <NavLink href="/bookmarks" name="Links úteis" />
+              <NavLink href="/tools" name="Apps favoritos" />
+
+              {/*<Menu>*/}
+              {/*  <MenuButton*/}
+              {/*    as={Button}*/}
+              {/*    variant="ghost"*/}
+              {/*    size="md"*/}
+              {/*    px={4}*/}
+              {/*    rightIcon={<ChevronDown size={18} />}*/}
+              {/*  >*/}
+              {/*    Links*/}
+              {/*  </MenuButton>*/}
+              {/*  <MenuList>*/}
+              {/*    <Link href="/books">*/}
+              {/*      <MenuItem>*/}
+              {/*        <HStack>*/}
+              {/*          <Icon*/}
+              {/*            as={BookOpen}*/}
+              {/*            size={18}*/}
+              {/*            color={useColorModeValue("blue.500", "blue.200")}*/}
+              {/*          />*/}
+              {/*          <Text>Livros</Text>*/}
+              {/*        </HStack>*/}
+              {/*      </MenuItem>*/}
+              {/*    </Link>*/}
+              {/*    <Link href="/bookmarks">*/}
+              {/*      <MenuItem>*/}
+              {/*        <HStack>*/}
+              {/*          <Icon*/}
+              {/*            as={Bookmark}*/}
+              {/*            size={18}*/}
+              {/*            color={useColorModeValue("blue.500", "blue.200")}*/}
+              {/*          />*/}
+              {/*          <Text>Links úteis</Text>*/}
+              {/*        </HStack>*/}
+              {/*      </MenuItem>*/}
+              {/*    </Link>*/}
+              {/*    <Link href="/tools">*/}
+              {/*      <MenuItem>*/}
+              {/*        <HStack>*/}
+              {/*          <Icon*/}
+              {/*            as={LightningBolt}*/}
+              {/*            size={18}*/}
+              {/*            color={useColorModeValue("blue.500", "blue.200")}*/}
+              {/*          />*/}
+              {/*          <Text>Tools</Text>*/}
+              {/*        </HStack>*/}
+              {/*      </MenuItem>*/}
+              {/*    </Link>*/}
+              {/*  </MenuList>*/}
+              {/*</Menu>*/}
             </HStack>
             <HStack>
               <ThemeToggle />

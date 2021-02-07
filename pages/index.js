@@ -14,7 +14,7 @@ import {
 import Container from "../components/container";
 import PageTransition from "../components/page-transitions";
 import Section from "@/components/section";
-import { TwitterLogo } from "phosphor-react";
+import {InstagramLogo, TwitterLogo} from "phosphor-react";
 import ProjectCard from "@/components/project-card";
 import { getTable } from "@/lib/airtable";
 
@@ -24,68 +24,59 @@ const Home = ({ projects }) => (
       <VStack spacing={12}>
         <Section>
           <VStack spacing={4} align="start" fontSize="2xl">
-            <Heading size="xl">Hey, I'm Daniel 👋</Heading>
+            <Heading size="xl">Olá, Me chamo Gabriel Barcelos 👋</Heading>
             <VStack>
               <Text>
-                I'm a designer, developer and entrepreneur of sorts. Born and
-                raised in Germany and now living in the Netherlands.
+                Sou programador, e também me interesso por empreendedorismo, marketing digital, e vendas.
               </Text>
               <Text>
-                By day, I'm helping managers and creatives to run better digital
-                workshops with the{" "}
+                Comecei no empreendedorismo através da{" "}
                 <Link
                   variant="text"
-                  href="https://www.facilitator.school"
+                  href="https://www.timesharesolucoes.com.br"
                   isExternal
                 >
-                  Facilitator School
-                </Link>
-                . We are also working on a{" "}
-                <Link
-                  variant="text"
-                  href="https://www.facilitator.school/masterclass"
-                  isExternal
-                >
-                  transformational online course
+                  TimeShare Soluções
                 </Link>
                 .
               </Text>
               <Text>
-                In my spare time, I work on small web apps and{" "}
+                No{" "}
                 <Link
                   variant="text"
-                  href="https://chrome.google.com/webstore/detail/roam-highlighter/hponfflfgcjikmehlcdcnpapicnljkkc?hl=en"
-                  isExternal
+                  href="/blog"
                 >
-                  browser extensions
+                  BLOG
                 </Link>{" "}
-                that make life easier for other people. I also hang out on{" "}
+                blog do site você encontrará conteúdos de programação/tecnologia e negócios.
+              </Text>
+              <Text>
+                Na minha{" "}
                 <Link
-                  variant="text"
-                  href="https://twitter.com/wirtzdan"
-                  isExternal
+                    variant="text"
+                    href="/books"
                 >
-                  Twitter
-                </Link>
-                , where I learn, think and work in public.
+                  BIBLIOTECA
+                </Link>{" "}
+                digital, mantenho uma lista de leitura atualizada. Inclusive, aceito sugestões de leitura. 😀
               </Text>
             </VStack>
-            <Link href="https://twitter.com/wirtzdan" isExternal>
+            <Link href="https://instagram.com/gabrielbarceloscn" isExternal>
               <Button
-                colorScheme="blue"
+                colorScheme="purple"
                 rounded="xl"
                 size="lg"
-                leftIcon={<TwitterLogo weight="fill" />}
+                leftIcon={<InstagramLogo weight="fill" />}
                 mt={4}
               >
-                Follow me on Twitter
+                Instagram
               </Button>
             </Link>
           </VStack>
         </Section>
         <Section>
           <VStack align="start" spacing={8}>
-            <Heading size="lg">Projects</Heading>
+            <Heading size="lg">Projetos atuais</Heading>
 
             <SimpleGrid columns={1} spacing={4} mt={8} w="100%">
               {projects.map((projects) => (

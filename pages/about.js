@@ -74,4 +74,4 @@ const About = () => (
   </PageTransition>
 );
 
-export default About;
+// export default About;

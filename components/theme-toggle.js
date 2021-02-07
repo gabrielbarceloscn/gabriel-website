@@ -40,7 +40,7 @@ const ThemeToggle = ({ mobile }) => {
       ) : (
           <IconButton
               isRound
-              aria-label="Switch theme"
+              aria-label="Trocar tema da página"
               variant={mobile ? "ghost" : undefined}
               icon={
                 colorMode === "dark" ? (

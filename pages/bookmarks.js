@@ -19,7 +19,7 @@ const Bookmarks = ({ bookmarks }) => {
       <VStack spacing={8}>
         <Section>
           <VStack>
-            <Heading as="h1">Bookmarks</Heading>
+            <Heading as="h1">Links úteis</Heading>
             <Text
               fontSize={["xl", "2xl"]}
               color={useColorModeValue("gray.500", "gray.200")}

@@ -59,13 +59,13 @@ const MobileMenuToggle = ({ mobile }) => {
             <DrawerHeader>Menu</DrawerHeader>
             <DrawerBody pb={4}>
               <VStack>
-                <MobileMenuItem href="/" title="Home" />
-                <MobileMenuItem href="/about" title="About" />
+                <MobileMenuItem href="/" title="Início" />
+                {/*<MobileMenuItem href="/about" title="About" />*/}
                 <MobileMenuItem href="/blog" title="Blog" />
-                <MobileMenuItem href="/bookmarks" title="Bookmarks" />
+                <MobileMenuItem href="/bookmarks" title="Links úteis" />
                 <SimpleGrid columns={2} spacing={2} w="100%">
-                  <MobileMenuItem href="/books" title="Books" />
-                  <MobileMenuItem href="/tools" title="Tools" />
+                  <MobileMenuItem href="/books" title="Biblioteca" />
+                  <MobileMenuItem href="/tools" title="Apps que uso" />
                 </SimpleGrid>
               </VStack>
             </DrawerBody>
