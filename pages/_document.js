@@ -40,11 +40,9 @@ class MyDocument extends Document {
             sizes="16x16"
             type="image/png"
           />
-          <script
-            defer
-            src="https://static.cloudflareinsights.com/beacon.min.js"
-            data-cf-beacon='{"token": "e05266f3b9334fc0982f66a171e079f8"}'
-          ></script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5XB9V25RN"/>
+
+          <script src="/js/gtag.js" />
           <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
           <meta content="#3182CE" name="theme-color" />
           <meta content="#3182CE" name="msapplication-TileColor" />
