@@ -3,6 +3,9 @@ const withMDX = require("@next/mdx")({
 });
 
 module.exports = withMDX({
+    publicRuntimeConfig: {
+        GTagId: process.env.GTAG_ID
+    },
     pageExtensions: ["js", "tsx", "jsx", "mdx"],
     images: {
         domains: [
