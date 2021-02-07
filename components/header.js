@@ -84,13 +84,6 @@ const Header = () => {
     >
       <Container>
         <VStack align="start" spacing={0}>
-          {/* <NextLink href="/" passHref>
-            <chakra.a display="block" aria-label="Home">
-              <Text fontSize="2xl" fontWeight="bold">
-                Daniel Wirtz
-              </Text>
-            </chakra.a>
-          </NextLink> */}
           <HStack justify="space-between" w="100%" h={16}>
             <AvatarNavigation />
             <HStack ml={-4} spacing={2}>

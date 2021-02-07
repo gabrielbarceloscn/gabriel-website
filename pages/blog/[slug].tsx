@@ -58,12 +58,7 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({params}) => {
-
-    // console.log('\n params', params);
-
     let notionPages = await getPages();
-
-    // console.log('\n notionPages', notionPages);
 
     const currentPage =
         notionPages.find(page => page.rawPageId = params.slug);
@@ -71,8 +66,6 @@ export const getStaticProps = async ({params}) => {
     const currentPageRecordMap = (currentPage as { recordMap }).recordMap;
     const currentPageMeta = getMetaFromRecordMap(currentPageRecordMap);
     const currentPageProps = {...currentPage, meta: currentPageMeta};
-
-    // console.log('\n 🟡 currentPageProps', currentPageProps);
 
     return {
         props: currentPageProps,

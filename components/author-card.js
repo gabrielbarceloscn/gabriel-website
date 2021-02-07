@@ -31,7 +31,7 @@ const AuthorCard = ({ readingTime, publishedAt, updatedAt, url , tags}) => {
           <Avatar src="/avatar-small.jpg" h={10} w={10}></Avatar>
           <VStack spacing={0} align="start">
             <Text fontSize="md" fontWeight="500">
-              CaldasNovas.app
+              Gabriel Barcelos
             </Text>
             <Text fontSize="sm" color={useColorModeValue("gray.500", "gray.200")}>
               {publishedAt && format(publishedAt, 'pt-BR')}

@@ -8,6 +8,7 @@ import SEO from "../next-seo.config";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import MobileNavigation from "@/components/mobile-navigation";
+import {LightSoundProvider} from "@/components/light-sound-context"
 
 import 'react-notion-x/src/styles.css';
 import 'prismjs/themes/prism-tomorrow.css';
@@ -23,11 +24,13 @@ const App = ({ Component, pageProps }) => {
           <meta name="theme-color" content="#2BB0EC" />
         </Head>
         <DefaultSeo {...SEO} />
-        <Header />
-        <Box as="main" pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
-          <Component {...pageProps} />
-        </Box>
-        <MobileNavigation />
+        <LightSoundProvider>{/*Provide only sound to prevent memory leak*/}
+          <Header />
+          <Box as="main" pt={{ base: 16, md: 32 }} pb={{ base: 24, md: 16 }}>
+            <Component {...pageProps} />
+          </Box>
+          <MobileNavigation />
+        </LightSoundProvider>
         <Footer />
       </ChakraProvider>
       <FontFace />

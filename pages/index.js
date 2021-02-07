@@ -108,10 +108,6 @@ const Home = ({ projects }) => (
 
 export async function getStaticProps() {
   const projects = await getTable("Projects");
-  console.log(
-    "🚀 ~ file: index.js ~ line 74 ~ getStaticProps ~ projects",
-    projects
-  );
 
   return {
     props: {

@@ -22,9 +22,6 @@ class BlogLayout extends React.Component {
             rootUrl: null,
 
         };
-
-        // console.log('\n BlogLayout > Props', props);
-
     }
 
     componentDidMount() {

@@ -14,7 +14,7 @@ import { TwitterLogo } from "phosphor-react";
 import { ArrowNarrowRight } from "heroicons-react";
 
 const TwitterCard = ({ title, slug }) => {
-  const url = "https://danielwirtz.com/blog/" + slug;
+  const url = "https://gabrielbarcelos.com.br/blog/" + slug;
 
   return (
     <VStack

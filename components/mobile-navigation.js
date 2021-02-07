@@ -19,25 +19,6 @@ import NewsletterDrawer from "./newsletter-drawer";
 const MobileNavigation = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
-  const links = [
-    {
-      route: `/`,
-      title: `Home`,
-    },
-    {
-      route: `/about`,
-      title: `About`,
-    },
-    {
-      route: `/blog`,
-      title: `Blog`,
-    },
-    {
-      route: `/books`,
-      title: `Books`,
-    },
-  ];
-
   const menuvariants = {
     open: {
       opacity: 1,
@@ -59,7 +40,7 @@ const MobileNavigation = () => {
 
   return (
     <MotionBox
-      initial={false}
+      initial="false"
       animate={isOpen ? "open" : "closed"}
       position="fixed"
       bottom="0"
@@ -79,7 +60,7 @@ const MobileNavigation = () => {
         shadow="0 -2px 10px 0 rgba(0,0,0, 0.035);"
       >
         <NewsletterDrawer mobile />
-        <MenuToggle toggle={() => toggleOpen()} />
+        <MenuToggle />
         <ThemeToggle mobile />
       </HStack>
     </MotionBox>

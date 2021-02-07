@@ -18,8 +18,6 @@ export async function getPages(){
             )) : [])
         .filter((f) => f !== 'my-blog-posts' && f !== 'gb-postswrapper');
 
-    // console.log('\n \n pageIds AFTER filter', pageIds);
-
     return await Promise.all(pageIds.map(async (rawPageId)=>{
         return {rawPageId, ...(await resolveNotionPage(domain, rawPageId))}
     }))

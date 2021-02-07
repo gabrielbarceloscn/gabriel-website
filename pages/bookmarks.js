@@ -66,8 +66,6 @@ export async function getStaticProps() {
 
   const bookmarks = await res.json();
 
-  // console.log('bookmarks found', bookmarks);
-
   if (!bookmarks) {
     return {
       notFound: true,

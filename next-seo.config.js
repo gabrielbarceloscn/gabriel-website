@@ -1,19 +1,19 @@
-const title = "Daniel Wirtz";
-const description = "Designer, developer and maker of things. ";
+const title = "Gabriel Barcelos";
+const description = "Programador e Empresário. ";
 
 const SEO = {
   title,
   description,
-  canonical: "https://danielwirtz.com",
+  canonical: "https://gabrielbarcelos.com.br",
   openGraph: {
     type: "website",
-    locale: "en_IE",
-    url: "https://danielwirtz.com",
+    locale: "pt_BR",
+    url: "https://gabrielbarcelos.com.br",
     title,
     description,
     images: [
       {
-        url: "https://danielwirtz.com/static/images/banner.jpg",
+        url: "https://gabrielbarcelos.com.br/static/images/banner.jpg",
         alt: title,
         width: 2240,
         height: 1260,
@@ -21,8 +21,8 @@ const SEO = {
     ],
   },
   twitter: {
-    handle: "@wirtzdan",
-    site: "@wirtzdan",
+    handle: "@gabrielrb",
+    site: "@gabrielrb",
     cardType: "summary_large_image",
   },
 };

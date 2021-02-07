@@ -8,17 +8,17 @@ export default function NotFound() {
     <Container>
       <Center>
         <NextSeo
-          title="404 – Daniel Wirtz"
-          canonical="https://danielwirtz.com/404"
+          title="404 – Gabriel Barcelos"
+          canonical="https://gabrielbarcelos.com.br/404"
           openGraph={{
-            url: "https://danielwirtz.com/404",
-            title: "404 – Daniel Wirtz",
+            url: "https://gabrielbarcelos.com.br/404",
+            title: "404 – Gabriel Barcelos",
           }}
         />
         <VStack>
           <Heading size="3xl">404</Heading>
-          <Text mb={8}>Page not found</Text>
-          <Link href="/">Return home</Link>
+          <Text mb={8}>Página não encontrada</Text>
+          <Link href="/">Voltar ao início</Link>
         </VStack>
       </Center>
     </Container>

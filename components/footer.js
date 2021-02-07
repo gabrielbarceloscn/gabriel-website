@@ -38,7 +38,7 @@ const Footer = () => {
         py={4}
       >
         <Text fontSize="sm" color={useColorModeValue("gray.500", "gray.600")}>
-          © {date} Daniel Wirtz{" "}
+          © {date} Gabriel Barcelos{" "}
         </Text>
         <HStack spacing={4}>
           <FooterLink href="/disclaimer" name="Disclaimer" />

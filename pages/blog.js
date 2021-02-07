@@ -69,14 +69,10 @@ const comparePostDate = (strDateA, strDateB) => {
 export async function getStaticProps(){
   const notionPosts = await getAllPostMeta();
 
-  console.log('\n notionPosts', notionPosts);
-
   const notionPostsToShow =
       notionPosts
           .sort((a, b) => comparePostDate(a.publishDate, b.publishDate))
           .filter(criteria => criteria.status === "Publicado");
-
-  console.log('\n notionPostsToShow', notionPostsToShow);
 
   return {
     props: {
