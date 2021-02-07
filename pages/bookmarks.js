@@ -26,7 +26,7 @@ const Bookmarks = ({ bookmarks }) => {
               maxW="lg"
               textAlign="center"
             >
-              Links interessantes que não posso perder de vista.
+              Links que não posso perder de vista.
             </Text>
           </VStack>
         </Section>
@@ -65,6 +65,9 @@ export async function getStaticProps() {
   });
 
   const bookmarks = await res.json();
+
+  // console.log(`bookMarks`, bookmarks);
+  // console.log(`bookMarks[0].collection[0]`, bookmarks.items[0].collection);
 
   if (!bookmarks) {
     return {

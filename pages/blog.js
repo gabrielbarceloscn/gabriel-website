@@ -16,19 +16,19 @@ export default function Blog({ posts }) {
     <PageTransition>
       <Section>
         <VStack spacing={8}>
-          <VStack>
-            <Heading as="h1">Blog</Heading>
-            <Text
-              fontSize="2xl"
-              color={useColorModeValue("gray.500", "gray.200")}
-              maxW="lg"
-              textAlign="center"
-            >
-              Welcome to my blog. Here I share some of my thinking, insights and
-              views on life.
-            </Text>
-            <NewsletterDrawer placement="blog" />
-          </VStack>
+          {/*<VStack>*/}
+          {/*  <Heading as="h1">Blog</Heading>*/}
+          {/*  <Text*/}
+          {/*    fontSize="2xl"*/}
+          {/*    color={useColorModeValue("gray.500", "gray.200")}*/}
+          {/*    maxW="lg"*/}
+          {/*    textAlign="center"*/}
+          {/*  >*/}
+          {/*    Welcome to my blog. Here I share some of my thinking, insights and*/}
+          {/*    views on life.*/}
+          {/*  </Text>*/}
+          {/*  <NewsletterDrawer placement="blog" />*/}
+          {/*</VStack>*/}
 
           {!posts.length && "No posts found."}
           <VStack w="100%" align="start" spacing={4}>

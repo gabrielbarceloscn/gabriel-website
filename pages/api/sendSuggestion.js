@@ -18,7 +18,7 @@ export default function handler(req, res) {
 
   function sendSuggestion(data) {
     const { title, author, message } = data;
-    const table = base("Suggestions");
+    const table = base("BookSuggestion");
 
     return new Promise((resolve, reject) => {
       table.create(

@@ -41,8 +41,8 @@ const Footer = () => {
           © {date} Gabriel Barcelos{" "}
         </Text>
         <HStack spacing={4}>
-          <FooterLink href="/disclaimer" name="Disclaimer" />
-          <FooterLink href="/privacy" name="Privacy" />
+          {/*<FooterLink href="/disclaimer" name="Disclaimer" />*/}
+          {/*<FooterLink href="/privacy" name="Privacy" />*/}
         </HStack>
       </HStack>
     </Container>
