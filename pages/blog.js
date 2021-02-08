@@ -72,6 +72,7 @@ export async function getStaticProps(){
   const notionPostsToShow =
       notionPosts
           .sort((a, b) => comparePostDate(a.publishDate, b.publishDate))
+          .filter(criteria => criteria.publishDate !== undefined)
           .filter(criteria => criteria.status === "Publicado");
 
   return {

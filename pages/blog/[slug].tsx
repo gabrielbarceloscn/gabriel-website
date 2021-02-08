@@ -50,7 +50,7 @@ export async function getStaticPaths() {
     const slugs = (await getPages()).map(page => {
         const meta = getMetaFromRecordMap((page as { recordMap }).recordMap);
         return meta.slug;
-    }).filter(id => id);// Filtrar para apenas paths de paginas que contenham um slug, removendo null e undefined
+    }).filter(id => id === undefined);// Filtrar para apenas paths de paginas que contenham um slug, removendo null e undefined
     return {
         paths: slugs.map(slug => `/blog/${slug}`),
         fallback: 'blocking'
@@ -58,18 +58,70 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({params}) => {
-    let notionPages = await getPages();
+    const fullSlug = params.slug;
+    console.log('fullSlug', fullSlug);
 
-    const currentPage =
-        notionPages.find(page => page.rawPageId = params.slug);
+    try {
+        const page = (await getPages()).find(page =>{
+            const meta = getMetaFromRecordMap((page as {recordMap}).recordMap);
+            return meta.slug?.toLowerCase() == fullSlug?.toLowerCase();
+        } )
+        if(page){
+            const recordMap = (page as {recordMap})?.recordMap;
+            //console.log(JSON.stringify(recordMap));
+            const meta = getMetaFromRecordMap(recordMap);
+            const props = {...page, meta};
+            return {
+                props,
+                revalidate: 600
+            }
+        }
+        return {
+            props: {
+                error: {
+                    statusCode: 404,
+                    message: "Not Found"
+                }
+            },
+            revalidate: 600
+        }
+    } catch (err) {
+        console.error('page error', domain, fullSlug, err)
 
-    const currentPageRecordMap = (currentPage as { recordMap }).recordMap;
-    const currentPageMeta = getMetaFromRecordMap(currentPageRecordMap);
-    const currentPageProps = {...currentPage, meta: currentPageMeta};
-
-    return {
-        props: currentPageProps,
-        revalidate: 600
+        if(fullSlug){
+            throw new Error("Page error, not recreated! See log for more detail!");
+        }
+        return {
+            props: {
+                error: {
+                    statusCode: err.statusCode || 500,
+                    message: err.message
+                }
+            },
+            revalidate: 600
+        }
     }
+};
 
-}
+// export const getStaticProps = async ({params}) => {
+//
+//     console.log('Slug to find', params.slug);
+//     let notionPages = await getPages();
+//     // console.log('Pages', notionPages);
+//
+//     const currentPage =
+//         notionPages.find(page => page.rawPageId = params.slug);
+//     // console.log('currentPage', currentPage);
+//
+//     const currentPageRecordMap = (currentPage as { recordMap }).recordMap;
+//     const currentPageMeta = getMetaFromRecordMap(currentPageRecordMap);
+//     console.log('🟡currentPageMeta', currentPageMeta, '👆');
+//     const currentPageProps = {...currentPage, meta: currentPageMeta};
+//     // console.log('currentPageProps', currentPageProps);
+//
+//     return {
+//         props: currentPageProps,
+//         revalidate: 600
+//     }
+
+// }

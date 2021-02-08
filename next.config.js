@@ -10,7 +10,8 @@ module.exports = withMDX({
     images: {
         domains: [
             "dl.airtable.com",
-            "www.notion.so"
+            "www.notion.so",
+            "images.unsplash.com"
         ],
     },
 });

@@ -39,7 +39,7 @@ const BlogCard = ({ slug, publishDate, description, title }) => {
               {title}{" "}
               {new Date() - new Date(publishDate) < 1000 * 60 * 60 * 24 * 7 ? (
                 <Tag size="md" mt={1} ml={1} colorScheme="purple">
-                  New
+                  NOVO
                 </Tag>
               ) : undefined}
             </Text>
