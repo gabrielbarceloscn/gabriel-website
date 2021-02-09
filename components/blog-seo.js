@@ -2,12 +2,10 @@ import {NextSeo, ArticleJsonLd} from "next-seo";
 
 const BlogSeo = ({title, description, publishDate, url, image}) => {
 
-    console.log('publishDate', publishDate);
     const handledPublishDate = publishDate.split(' ')[0];
-    console.log('handledPublishDate', handledPublishDate);
     const date = new Date(handledPublishDate).toISOString();
     const featuredImage = {
-        url: `https://gabrielbarcelos.com.br${image}`,
+        url: image, //`https://gabrielbarcelos.com.br${image}`,
         alt: title,
     };
 

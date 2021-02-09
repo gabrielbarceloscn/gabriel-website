@@ -44,7 +44,6 @@ class BlogLayout extends React.Component {
                             image={this.props.meta.cover ?
                                 this.props.meta.cover
                                 : "https://gabrielbarcelos.com.br/static/images/banner.jpg"}
-                            //{...this.props.meta}
                         />
                         <article ref={target}>
                             <VStack w="100%" align="left" spacing={6}>
