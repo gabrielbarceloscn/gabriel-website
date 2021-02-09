@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 import Container from "../components/container";
 import NextLink from "next/link";
+import siteconfig from "site.config.json";
 
 const Footer = () => {
   const date = new Date().getFullYear();
@@ -41,6 +42,9 @@ const Footer = () => {
           © {date} Gabriel Barcelos{" "}
         </Text>
         <HStack spacing={4}>
+            <Text fontSize={"xs"}>
+                {siteconfig.version}
+            </Text>
           {/*<FooterLink href="/disclaimer" name="Disclaimer" />*/}
           {/*<FooterLink href="/privacy" name="Privacy" />*/}
         </HStack>
