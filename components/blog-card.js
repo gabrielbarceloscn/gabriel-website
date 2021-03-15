@@ -10,7 +10,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 
-const BlogCard = ({ slug, publishDate, description, title }) => {
+const BlogCard = ({ slug, publishDate, updateDate, description, title, pinned }) => {
   return (
     <Link href={`/blog/${slug}`}>
       <Box
@@ -32,16 +32,29 @@ const BlogCard = ({ slug, publishDate, description, title }) => {
         >
           <HStack>
             <Text
-              color={useColorModeValue("blue.500", "blue.200")}
-              fontWeight="bold"
-              fontSize="xl"
+                color={useColorModeValue("blue.500", "blue.200")}
+                fontWeight="bold"
+                fontSize="xl"
             >
               {title}{" "}
-              {new Date() - new Date(publishDate) < 1000 * 60 * 60 * 24 * 7 ? (
-                <Tag size="md" mt={1} ml={1} colorScheme="purple">
-                  NOVO
-                </Tag>
-              ) : undefined}
+              {pinned ?
+                  new Date() - new Date(updateDate) < 1000 * 60 * 60 * 24 * 3 && (
+                      <Tag size="md" mt={1} ml={1} colorScheme="blue">
+                        Atualizado
+                      </Tag>
+                  )
+                  :
+                  new Date() - new Date(publishDate) < 1000 * 60 * 60 * 24 * 3 && (
+                      <Tag size="md" mt={1} ml={1} colorScheme="purple">
+                        Novo
+                      </Tag>
+                  )
+              }
+              {pinned && (
+                  <Tag size="md" mt={1} ml={1} colorScheme="red">
+                    Fixado no topo
+                  </Tag>
+              )}
             </Text>
           </HStack>
 

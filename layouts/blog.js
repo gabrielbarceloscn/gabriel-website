@@ -72,7 +72,7 @@ class BlogLayout extends React.Component {
                                         publishedAt={this.props.meta.publishDate}
                                         url={`${this.state.rootUrl}/blog/${this.props.meta.slug}`}
                                         updatedAt={this.props.meta.updateDate}
-                                        readingTime={this.props.meta.readingTime.text}
+                                        // readingTime={this.props.meta.readingTime.text}
                                         tags={this.props.meta.tags}
                                     />
                                 </VStack>
