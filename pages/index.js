@@ -93,14 +93,6 @@ const Home = ({projects}) => (
                             ))}
                         </SimpleGrid>
                     </VStack>
-                    <VStack align={"start"} spacing={8} mt={8}>
-                        <Heading size={"lg"}>Produtividade sonora</Heading>
-                        <Text>O YouTube está repleto de mixes instrumentais pra quem gosta de trabalhar ouvindo algo. Esse é um exemplo:</Text>
-
-                        <iframe width="100%" height="415" src="https://www.youtube.com/embed/RcrpTESmqaU" frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen/>
-                    </VStack>
                 </Section>
             </VStack>
         </PageTransition>
