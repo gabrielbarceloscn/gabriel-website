@@ -65,7 +65,7 @@ const MobileMenuToggle = ({ mobile }) => {
                 <MobileMenuItem href="/bookmarks" title="Links úteis" />
                 <SimpleGrid columns={2} spacing={2} w="100%">
                   <MobileMenuItem href="/books" title="Biblioteca" />
-                  <MobileMenuItem href="/tools" title="Apps que uso" />
+                  <MobileMenuItem href="/tools" title="Apps favoritos" />
                 </SimpleGrid>
               </VStack>
             </DrawerBody>

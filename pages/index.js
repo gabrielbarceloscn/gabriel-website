@@ -30,17 +30,17 @@ const Home = ({projects}) => (
                                 Sou programador, e também me interesso por empreendedorismo, marketing digital, e
                                 vendas.
                             </Text>
-                            <Text>
-                                Comecei no empreendedorismo através da{" "}
-                                <Link
-                                    variant="text"
-                                    href="https://www.timesharesolucoes.com.br"
-                                    isExternal
-                                >
-                                    TimeShare Soluções
-                                </Link>
-                                .
-                            </Text>
+                            {/*<Text>*/}
+                            {/*    Comecei no empreendedorismo através da{" "}*/}
+                            {/*    <Link*/}
+                            {/*        variant="text"*/}
+                            {/*        href="https://www.timesharesolucoes.com.br"*/}
+                            {/*        isExternal*/}
+                            {/*    >*/}
+                            {/*        TimeShare Soluções*/}
+                            {/*    </Link>*/}
+                            {/*    .*/}
+                            {/*</Text>*/}
                             <Text>
                                 No{" "}
                                 <Link
