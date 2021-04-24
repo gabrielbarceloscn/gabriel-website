@@ -100,9 +100,6 @@ const Books = ({ books }) => {
                 <SimpleGrid columns={[1, 2]} spacingY={8} spacingX={4} mt={8}>
                   {books
                     .filter((b) => b.fields.Status === 'Na Lista')
-                    .sort((x, y) =>
-                      sorter(y.fields["Date Read"], x.fields["Date Read"])
-                    )
                     .map((book) => (
                       <BookCard
                         key={book.id}
@@ -120,9 +117,6 @@ const Books = ({ books }) => {
                 <SimpleGrid columns={[1, 2]} spacingY={8} spacingX={4} mt={8}>
                   {books
                       .filter((b) => b.fields.Status === 'Lendo')
-                    .sort((x, y) =>
-                      sorter(y.fields["Date Read"], x.fields["Date Read"])
-                    )
                     .map((book) => (
                       <BookCard
                         key={book.id}
