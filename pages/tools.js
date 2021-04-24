@@ -22,7 +22,7 @@ import Section from "@/components/section";
 import BookCard from "@/components/book-card";
 
 import BookSuggestion from "@/components/book-suggestion";
-import { BookOpen, DesktopComputer, Heart } from "heroicons-react";
+import { DesktopComputerIcon } from "@heroicons/react/solid";
 import sorter from "sort-isostring";
 import { AndroidLogo, AppleLogo, Globe, Monitor } from "phosphor-react";
 import ToolCard from "../components/tool-card";
@@ -110,7 +110,7 @@ const Tools = ({ tools }) => {
                 mt={2}
               >
                 <HStack spacing={1}>
-                  <Icon as={DesktopComputer} />
+                  <Icon as={DesktopComputerIcon} />
                   <Text>Web</Text>
                 </HStack>
               </Tab>
@@ -125,7 +125,7 @@ const Tools = ({ tools }) => {
                 mt={2}
               >
                 <HStack spacing={1}>
-                  <Icon as={DesktopComputer} />
+                  <Icon as={DesktopComputerIcon} />
                   <Text>Windows</Text>
                 </HStack>
               </Tab>

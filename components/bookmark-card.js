@@ -23,7 +23,6 @@ import {
 } from "@chakra-ui/react";
 import { format } from "timeago.js";
 import ReactPlayer from "react-player/lazy";
-import { LinkOutline, Play } from "heroicons-react";
 
 const BookmarkCard = (props) => {
   const { title, excerpt, cover, type, link, created } = props;

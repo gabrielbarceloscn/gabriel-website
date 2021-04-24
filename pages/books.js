@@ -23,7 +23,7 @@ import Section from "@/components/section";
 import BookCard from "@/components/book-card";
 
 import BookSuggestion from "@/components/book-suggestion";
-import { BookOpen, Heart } from "heroicons-react";
+import { BookOpenIcon, HeartIcon } from "@heroicons/react/solid";
 import sorter from "sort-isostring";
 
 const Books = ({ books }) => {
@@ -64,7 +64,7 @@ const Books = ({ books }) => {
                 mr={2}
               >
                 <HStack spacing={1}>
-                  <Icon as={BookOpen} />
+                  <Icon as={BookOpenIcon} />
                   <Text>Na Lista</Text>
                 </HStack>
               </Tab>
@@ -77,7 +77,7 @@ const Books = ({ books }) => {
                 }}
               >
                 <HStack spacing={1}>
-                  <Icon as={Heart} />
+                  <Icon as={HeartIcon} />
                   <Text>Lendo</Text>
                 </HStack>
               </Tab>
@@ -90,7 +90,7 @@ const Books = ({ books }) => {
                   }}
               >
                 <HStack spacing={1}>
-                  <Icon as={Heart} />
+                  <Icon as={HeartIcon} />
                   <Text>Lido</Text>
                 </HStack>
               </Tab>

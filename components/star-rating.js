@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, HStack, Icon, useColorModeValue, Text } from "@chakra-ui/react";
-import { Star } from "heroicons-react";
+import { StarIcon } from "@heroicons/react/solid";
 
 const StarRating = ({ rating }) => {
   const [stars] = useState(rating);
@@ -19,7 +19,7 @@ const StarRating = ({ rating }) => {
           key={i}
           w={4}
           height={4}
-          as={Star}
+          as={StarIcon}
           color={useColorModeValue("yellow.400", "yellow.200")}
         />
       ))}
@@ -28,7 +28,7 @@ const StarRating = ({ rating }) => {
           key={i}
           w={4}
           height={4}
-          as={Star}
+          as={StarIcon}
           color={useColorModeValue("gray.300", "gray.600")}
         />
       ))}

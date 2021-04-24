@@ -9,7 +9,7 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import Highlight from "./highlight";
-import { Check, DuplicateOutline } from "heroicons-react";
+import { CheckIcon, DuplicateIcon } from "@heroicons/react/solid";
 
 const Codeblock = (props) => {
   const showLines = true;
@@ -63,7 +63,7 @@ const Codeblock = (props) => {
               hasCopied ? useColorModeValue("green.50", "green.800") : undefined
             }
             icon={
-              hasCopied ? <Check size={18} /> : <DuplicateOutline size={18} />
+              hasCopied ? <CheckIcon size={18} /> : <DuplicateIcon size={18} />
             }
           />
         </HStack>

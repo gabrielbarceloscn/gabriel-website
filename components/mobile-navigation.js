@@ -9,14 +9,12 @@ import {
     VStack,
     Link, Text
 } from "@chakra-ui/react";
-import {Mail, Rss} from "heroicons-react";
+import {RssIcon} from "@heroicons/react/solid";
 
 import {motion, useCycle} from "framer-motion";
 import MenuToggle from "./mobile-menu-toggle";
-import MobileMenuItem from "./mobile-menu-item";
 import ThemeToggle from "./theme-toggle";
-import NewsletterDrawer from "./newsletter-drawer";
-import MobileMenuButton from "@/components/mobile-menu-button";
+import {SunIcon} from "@heroicons/react/outline";
 
 const MobileNavigation = () => {
     const [isOpen, toggleOpen] = useCycle(false, true);
@@ -71,7 +69,7 @@ const MobileNavigation = () => {
                         px={6}
                         color={useColorModeValue("blue.600", "blue.200")}
                     >
-                        <Rss/>
+                        <RssIcon width={22} height={22}/>
                         <Text
                             fontSize="xs"
                             fontWeight="500"

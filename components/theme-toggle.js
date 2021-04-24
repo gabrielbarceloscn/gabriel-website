@@ -1,7 +1,6 @@
 import React, {useContext, useEffect} from "react";
 import { IconButton, useColorMode, ScaleFade, Tooltip } from "@chakra-ui/react";
-import { SunOutline, MoonOutline } from "heroicons-react";
-import useSound from "use-sound";
+import { SunIcon, MoonIcon } from "@heroicons/react/outline";
 import MobileMenuButton from "./mobile-menu-button";
 import LightSoundContext from "@/components/light-sound-context";
 
@@ -27,11 +26,12 @@ const ThemeToggle = ({ mobile }) => {
               icon={
                 colorMode === "dark" ? (
                     <ScaleFade in>
-                      <SunOutline size={mobile ? 22 : 18} />
+                      <SunIcon width={22} height={22}/>
                     </ScaleFade>
                 ) : (
                     <ScaleFade in>
-                      <MoonOutline size={mobile ? 22 : 18} />
+                      <MoonIcon width={22} height={22}/>
+                      {/*<MoonIcon size={mobile ? 22 : 18} />*/}
                     </ScaleFade>
                 )
               }
@@ -42,17 +42,7 @@ const ThemeToggle = ({ mobile }) => {
               isRound
               aria-label="Trocar tema da página"
               variant={mobile ? "ghost" : undefined}
-              icon={
-                colorMode === "dark" ? (
-                    <ScaleFade in>
-                      <SunOutline size={mobile ? 22 : 18} />
-                    </ScaleFade>
-                ) : (
-                    <ScaleFade in>
-                      <MoonOutline size={mobile ? 22 : 18} />
-                    </ScaleFade>
-                )
-              }
+              icon={colorMode === "dark" ? <SunIcon width={22} height={22} /> : <MoonIcon width={22} height={22}/>}
               onClick={handleClick}
           />
       )}

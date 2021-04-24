@@ -13,12 +13,10 @@ import {
 } from "@chakra-ui/react"
 import { format, render, cancel, register } from "timeago.js";
 import {
-  ClipboardCheckOutline,
-  ClipboardCopyOutline,
-  Duplicate,
-  Link,
-  Check,
-} from "heroicons-react";
+  LinkIcon,
+  CheckIcon,
+} from "@heroicons/react/solid";
+
 
 const AuthorCard = ({ readingTime, publishedAt, updatedAt, url , tags}) => {
   const { hasCopied, onCopy } = useClipboard(url);
@@ -28,7 +26,7 @@ const AuthorCard = ({ readingTime, publishedAt, updatedAt, url , tags}) => {
   return (
       <Stack direction="row" justify="space-between">
         <HStack>
-          <Avatar src="/avatar-small.jpg" h={10} w={10}></Avatar>
+          <Avatar src="/avatar-small.jpg" h={10} w={10}/>
           <VStack spacing={0} align="start">
             <Text fontSize="md" fontWeight="500">
               Gabriel Barcelos
@@ -64,7 +62,7 @@ const AuthorCard = ({ readingTime, publishedAt, updatedAt, url , tags}) => {
                     : useColorModeValue("gray.800", "gray.100")
               }
               bg={useColorModeValue("white", "gray.800")}
-              leftIcon={hasCopied ? <Check size={18} /> : <Link size={18} />}
+              leftIcon={hasCopied ? <CheckIcon size={18} /> : <LinkIcon size={18} />}
           >
             {hasCopied ? "Copiado" : "Copiar Link"}
           </Button>

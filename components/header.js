@@ -26,15 +26,6 @@ import NextLink from "next/link";
 import Container from "./container";
 import { useRouter } from "next/router";
 import ThemeToggle from "./theme-toggle";
-import {
-  Bookmark,
-  BookOpen,
-  ChevronDown,
-  ChevronDownOutline,
-  LightningBolt,
-  Menu as MenuIcon,
-} from "heroicons-react";
-import Link from "next/link";
 import AvatarNavigation from "./avatar-navigation";
 
 function NavLink(props) {

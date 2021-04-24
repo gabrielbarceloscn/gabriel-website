@@ -13,7 +13,6 @@ import {
   Link,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import { Eye, EyeOutline, Star } from "heroicons-react";
 import StarRating from "./star-rating";
 import { format, render, cancel, register } from "timeago.js";
 
@@ -52,11 +51,11 @@ const BookCard = ({ title, author, rating, isFavorite, cover, dateRead }) => {
           bottom={4}
         >
           <Image
-            src={cover ? cover[0].thumbnails.large.url : "/"}
-            height={96}
-            width={60}
-            layout="responsive"
-          ></Image>
+    src={cover ? cover[0].thumbnails.large.url : "/"}
+    height={96}
+    width={60}
+    layout="responsive"
+    />
         </Box>
         <VStack
           align="start"

@@ -19,7 +19,7 @@ import {
   Text,
   FormHelperText,
 } from "@chakra-ui/react";
-import { Rss } from "heroicons-react";
+import { RssIcon } from "@heroicons/react/solid";
 import { useForm } from "react-hook-form";
 import MobileMenuButton from "./mobile-menu-button";
 import Link from "next/link";
@@ -121,7 +121,7 @@ const NewsletterDrawer = ({ mobile, placement }) => {
                           w="100%"
                           isDisabled={isSuccessful}
                           isLoading={isSubmitting}
-                          leftIcon={<Rss size={20} />}
+                          leftIcon={<RssIcon size={20} />}
                           rounded="xl"
                       >
                         Inscrever
