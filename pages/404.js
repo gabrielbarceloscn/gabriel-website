@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 import { Center, Heading, VStack, Text } from "@chakra-ui/react";
-import Container from "@/components/container";
+import Container from "../components/container";
 
 export default function NotFound() {
   return (

@@ -2,7 +2,7 @@ import React, {useContext, useEffect} from "react";
 import { IconButton, useColorMode, ScaleFade, Tooltip } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@heroicons/react/outline";
 import MobileMenuButton from "./mobile-menu-button";
-import LightSoundContext from "@/components/light-sound-context";
+import LightSoundContext from ".//light-sound-context";
 
 const ThemeToggle = ({ mobile }) => {
   const { colorMode, toggleColorMode } = useColorMode();

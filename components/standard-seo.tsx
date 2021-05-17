@@ -1,5 +1,5 @@
 import {NextSeo} from "next-seo";
-import Section from "@/components/section";
+import Section from ".//section";
 
 import SEO from "../next-seo.config";
 

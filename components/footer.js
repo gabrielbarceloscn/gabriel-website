@@ -6,7 +6,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Container from "../components/container";
+import Container from ".//container";
 import NextLink from "next/link";
 import siteconfig from "site.config.json";
 

@@ -19,10 +19,10 @@ import {
 } from "@chakra-ui/react";
 import PageTransition from "../components/page-transitions";
 import { getTable } from "@/lib/airtable";
-import Section from "@/components/section";
-import BookCard from "@/components/book-card";
+import Section from "../components/section";
+import BookCard from "../components/book-card";
 
-import BookSuggestion from "@/components/book-suggestion";
+import BookSuggestion from "../components/book-suggestion";
 import { BookOpenIcon, HeartIcon } from "@heroicons/react/solid";
 import sorter from "sort-isostring";
 

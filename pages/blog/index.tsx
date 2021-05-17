@@ -1,12 +1,12 @@
 
 import React from "react";
 import { VStack, Text, Heading, useColorModeValue } from "@chakra-ui/react";
-import PageTransition from "@/components/page-transitions";
-import Section from "@/components/section";
-import BlogCard from "@/components/blog-card";
-import {getAllPostMeta} from "./services";
-import StandardSeo from "@/components/standard-seo";
-import slugify from "slugify";
+import PageTransition from "../../components/page-transitions";
+import Section from "../../components/section";
+import BlogCard from "../../components/blog-card";
+import {getAllPostMeta} from "lib/notion-unofficial";
+import {getDatabaseOfficial, getPlainTextFromRichText} from "lib/notion-official";
+import StandardSeo from "../../components/standard-seo";
 
 export default function Blog({ posts }: { posts: { slug, publishDate, description, title }[]}) {
     return (
@@ -34,8 +34,6 @@ export default function Blog({ posts }: { posts: { slug, publishDate, descriptio
                     <VStack w="100%" align="start" spacing={4}>
                         {posts
                             .map((post: any, index) => {
-                                if(!post.slug && post.title)
-                                    post.slug = slugify(post.title);
                                 return <BlogCard key={index} {...post}/>;
                             })}
                     </VStack>
@@ -76,14 +74,34 @@ const comparePostDate = ({publishDate:strDateA, updateDate:strUpdateDateA, pinne
     return 0;
 }
 
-export async function getStaticProps() {
-    const config = require("./config.json");
-    const posts = await getAllPostMeta();
-    posts.sort(comparePostDate);
+export const getStaticProps = async () => {
+    const databaseId = process.env.NOTION_DATABASE_PAGE_ID;
+    const notionDatabase = await getDatabaseOfficial(databaseId);
+
+    // console.log(`DATABASE: ${JSON.stringify(notionDatabase)}`)
+
+    const posts = notionDatabase.map((post, index) => {
+
+        return {
+            pageId: post["id"],
+            title: getPlainTextFromRichText(post.properties["Name"]["title"]),
+            description: getPlainTextFromRichText(post.properties["Description"]["rich_text"]),
+            slug: getPlainTextFromRichText(post.properties["Slug"]["rich_text"]),
+            publishDate: post["created_time"],
+            updateDate: post["last_edited_time"],
+            pinned: post.properties["Pinned"]["checkbox"],
+            status: post.properties["Status"]["select"]["name"]
+        }
+    });
+
+    const orderedPosts = posts.sort(comparePostDate);
+
+    const filteredPosts = orderedPosts.filter(post => post.status === 'Postado');
+
     return {
         props: {
-            posts: posts.filter(post => post.status == "Postado")
+            posts: filteredPosts
         },
-        revalidate: config.cache_timeout_seconds,
-    };
+        revalidate: process.env.NEXTJS_REVALIDATE_TIMEOUT
+    }
 }

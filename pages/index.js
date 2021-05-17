@@ -13,9 +13,9 @@ import {
 } from "@chakra-ui/react";
 import Container from "../components/container";
 import PageTransition from "../components/page-transitions";
-import Section from "@/components/section";
+import Section from "../components/section";
 import {InstagramLogo, TwitterLogo} from "phosphor-react";
-import ProjectCard from "@/components/project-card";
+import ProjectCard from "../components/project-card";
 import {getTable} from "@/lib/airtable";
 
 const Home = ({projects}) => (

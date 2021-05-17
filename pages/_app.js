@@ -2,13 +2,13 @@ import Head from "next/head";
 import React from "react";
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import customTheme from "theme";
-import FontFace from "components/font-face";
+import FontFace from "components-mdx/font-face";
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import MobileNavigation from "@/components/mobile-navigation";
-import {LightSoundProvider} from "@/components/light-sound-context"
+import MobileNavigation from "../components/mobile-navigation";
+import {LightSoundProvider} from "../components/light-sound-context"
 
 import 'react-notion-x/src/styles.css';
 import 'prismjs/themes/prism-tomorrow.css';

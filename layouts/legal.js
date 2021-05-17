@@ -1,6 +1,6 @@
 import React from "react";
-import Section from "@/components/section";
-import MDXCompProvider from "@/components/mdx-provider";
+import Section from "../components/section";
+import MDXCompProvider from "../components-mdx/mdx-provider";
 
 export default function LegalLayout({ children }) {
   return (

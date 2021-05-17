@@ -1,13 +1,13 @@
 import React from "react";
-import Section from "@/components/section";
+import Section from "../components/section";
 import {
     Heading,
     VStack,
     Box,
 } from "@chakra-ui/react";
-import ReadingProgress from "@/components/reading-progress";
-import BlogSeo from "@/components/blog-seo";
-import AuthorCard from "@/components/author-card";
+import ReadingProgress from "../components/reading-progress";
+import BlogSeo from "../components/blog-seo";
+import AuthorCard from "../components/author-card";
 import Image from "next/image";
 import PageTransition from "../components/page-transitions";
 

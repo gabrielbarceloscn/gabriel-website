@@ -8,7 +8,7 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import PageTransition from "../components/page-transitions";
-import Section from "@/components/section";
+import Section from "../components/section";
 import sorter from "sort-isostring";
 
 import BookmarkCard from "../components/bookmark-card";
