@@ -104,7 +104,7 @@ export const getStaticProps = async ({params}) => {
                 recordMap: currentRecordMap,
                 meta: currentMeta
             },
-            revalidate: process.env.NEXTJS_REVALIDATE_TIMEOUT
+            revalidate: +process.env.NEXTJS_REVALIDATE_TIMEOUT
         }
     } catch (err) {
         console.error('erro na página', currentSlug, err)
@@ -119,7 +119,7 @@ export const getStaticProps = async ({params}) => {
                     message: err.message
                 }
             },
-            revalidate: process.env.NEXTJS_REVALIDATE_TIMEOUT
+            revalidate: +process.env.NEXTJS_REVALIDATE_TIMEOUT
         }
     }
 }

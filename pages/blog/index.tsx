@@ -102,6 +102,6 @@ export const getStaticProps = async () => {
         props: {
             posts: filteredPosts
         },
-        revalidate: process.env.NEXTJS_REVALIDATE_TIMEOUT
+        revalidate: +process.env.NEXTJS_REVALIDATE_TIMEOUT
     }
 }
